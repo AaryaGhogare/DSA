@@ -1,20 +1,20 @@
 # DSA
 DSA Journey🚀
-Language: C++
-Author : Aarya Ghogare
-Start Date: 20th May 2026
+Language: C++<br>
+Author : Aarya Ghogare<br>
+Start Date: 20th May 2026<br>
 
-Goals
-Build strong DSA fundamentals
-Be internship & placement ready
-Practice consistently with LeetCode
-Structure
-Arrays
-Strings
-Recursion
-Linked List
-Stack & Queue
-Trees
-Graphs
-DP
+Goals<br>
+Build strong DSA fundamentals<br>
+Be internship & placement ready<br>
+Practice consistently with LeetCode<br>
+Structure<br>
+Arrays<br>
+Strings<br>
+Recursion<br>
+Linked List<br>
+Stack & Queue<br>
+Trees<br>
+Graphs<br>
+DP<br>
 Consistency > Speed

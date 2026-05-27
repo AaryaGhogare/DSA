@@ -42,12 +42,19 @@ class Solution
 	        
 	    	//OPTIMAL- Kadane's Algorithm
 	    	int maxSum = INT_MIN,sum=0,i;
+        	int start,startind,endind;
 	    	for(i=0;i<nums.size();i++)
 	    	{
+	    		if(sum == 0)
+	    		{
+	    			start = i;
+				}
 	    		sum = sum + nums[i];
 	    		if(sum > maxSum)
 	    		{
 	    			maxSum = sum;
+            		startind = start;
+            		endind = i;
 				}
 	    		
 	    		if(sum < 0)
@@ -55,6 +62,11 @@ class Solution
 	    			sum = 0;
 				}
 			}
+		      cout<<"\nPrinting the subarray: ";
+		      for(i=startind;i<=endind;i++)
+		      {
+		        cout<<nums[i]<<" ";
+		      }
 			if(maxSum < 0)
 			{
 				return 0;

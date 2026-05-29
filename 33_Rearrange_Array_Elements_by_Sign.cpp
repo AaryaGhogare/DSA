@@ -30,7 +30,7 @@ class Solution
           }
           return nums;*/
           
-          //BETTER
+          //OPTIMAL
           vector <int> temp;
           int i,n,pos=0,neg=1;
           n = nums.size();

@@ -33,7 +33,8 @@ class Solution
           	int remove = presum - k;
           	cnt = cnt + mpp[remove];
           	mpp[presum] = mpp[presum] + 1;
-		  }
+		      }
+          return cnt;
       }
 };
 int main()

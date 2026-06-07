@@ -29,10 +29,10 @@ class Solution
           int presum = 0, cnt = 0,i;
           for(i = 0;i < nums.size();i++)
           {
-          	preSum = presum + nums[i];
-          	int remove = preSum - k;
+          	presum = presum + nums[i];
+          	int remove = presum - k;
           	cnt = cnt + mpp[remove];
-          	mpp[preSum] = mpp[preSum] + 1;
+          	mpp[presum] = mpp[presum] + 1;
 		  }
       }
 };

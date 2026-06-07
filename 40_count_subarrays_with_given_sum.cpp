@@ -26,7 +26,7 @@ class Solution
           //OPTIMAL
           unordered_map<int,int> mpp;
           mpp[0] = 1;
-          int presum = 0, cnt = 0;
+          int presum = 0, cnt = 0,i;
           for(i = 0;i < nums.size();i++)
           {
           	preSum = presum + nums[i];

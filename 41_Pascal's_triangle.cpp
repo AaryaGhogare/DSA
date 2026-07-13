@@ -8,7 +8,7 @@ class Solution
       {
         int i,j,res=1;
         vector<vector<int> > arr;
-         for(int row = 0; row < numRows; row++)
+        for(int row = 0; row < numRows; row++)
         {
             vector<int> temp;
             int res = 1;

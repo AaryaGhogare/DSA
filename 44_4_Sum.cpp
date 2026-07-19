@@ -94,8 +94,8 @@ class Solution
 								ans.push_back(temp);
 								k++;
 								l--;
-								while(nums[k]==nums[k-1])continue;
-								while(nums[l]==nums[l+1])continue;
+								while(k<l && nums[k]==nums[k-1])k++;
+								while(k<l && nums[l]==nums[l+1])l--;
 							}
 							else if(sum<target)k++;
 							else(l--);

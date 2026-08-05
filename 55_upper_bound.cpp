@@ -4,7 +4,7 @@ using namespace std;
 class Solution 
 {
   public:
-      int lowerBound(vector<int> &nums, int x) 
+      int upperBound(vector<int> &nums, int x) 
       {
         int low,up,mid,n=nums.size();
         low=0;
@@ -45,6 +45,6 @@ int main()
   cout<<"\nEnter value x: ";
   cin>>x;
 	Solution sol;
-	ans=sol.lowerBound(arr,x);
+	ans=sol.upperBound(arr,x);
 	cout<<"\nThe index is: "<<ans;
 }

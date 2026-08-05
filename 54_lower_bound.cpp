@@ -6,30 +6,25 @@ class Solution
   public:
       int lowerBound(vector<int> &nums, int x) 
       {
+        int ans = nums.size();
         int low,up,mid,n=nums.size();
         low=0;
         up=n-1;
-        while(low<=up)
-        {
-          mid=(low+up)/2;
-          if(x == nums[mid])
-          {
-            return mid;
-          }
-          else if(nums[mid] < x)
-          {
-          	low=mid+1;
-          }
-          else
-          {
-            up=mid-1;
-            if(nums[mid]>x)
-            {
-            	return mid;
-			}
-          }
-        }
-        return nums.size();//question demands-->If no such index is found, return the size of the array.
+		while(low <= up)
+		{
+		    int mid = (low + up)/2;
+		    if(nums[mid] >= x)
+		    {
+		        ans = mid;
+		        up = mid - 1;
+		    }
+		    else
+		    {
+		        low = mid + 1;
+		    }
+		}
+
+		return nums.size();//question demands-->If no such index is found, return the size of the array.
       }
 };
 int main()

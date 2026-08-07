@@ -11,14 +11,15 @@ class Solution
         while(low<=up)
         {
           mid=(low+up)/2;
-          if(nums[mid] <= x)
+          if(nums[mid] == x)
           {
-          	low=mid+1;
-            if(nums[mid]==x)
-            {
-                ans=mid;
-            }
+            ans = mid;
+            low = mid + 1;     // continue searching right
           }
+          else if(nums[mid] < x)
+         {
+            low = mid + 1;
+         }
           else
           {
             up=mid-1;
@@ -32,19 +33,23 @@ class Solution
         int low,up,mid,n=nums.size();
         low=0;
         up=n-1;
-        while(low <= up)
-        {
-          mid = (low + up)/2;
-          if(nums[mid]<=x)
-          {
-            ans = mid;
-            low = mid + 1;
-          }
-          else
-          {
-            up = mid - 1;
-          }
-        }
+		while(low <= up)
+		{
+		    mid = (low + up)/2;
+		    if(nums[mid] == x)
+            {
+                ans = mid;
+                up = mid - 1;      // continue searching left
+            }
+            else if(nums[mid] < x)
+            {
+                low = mid + 1;
+            }
+		    else
+		    {
+                up = mid - 1;
+		    }
+		}
         
 		return ans;
       }      
@@ -52,11 +57,15 @@ class Solution
       public:
       vector<int> searchRange(vector<int>& nums, int target) 
       {
-      	vector <int> ans(2,-1);
-        ans[0]=lowerBound(nums,target);
-        ans[1]=upperBound(nums,target);
-        
-        return ans;
+        if(nums.size()==0)
+        {
+            return {-1,-1};
+        }
+        int ub,lb;
+        lb=lowerBound(nums,target);
+        if(lb==-1||nums[lb]!=target)return{-1,-1};
+        ub=upperBound(nums,target);
+        return{lb,ub};
       }
 };
 int main()

@@ -23,7 +23,7 @@ class DLL
 	private:
 		Node* head;
 	public:
-		SLL()
+		DLL()
 		{
 			head=NULL;
 		}

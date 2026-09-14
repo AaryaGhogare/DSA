@@ -51,10 +51,12 @@ class DLL
   {
     Node *p;
     p=head;
-    p->next->prev=NULL;
+    if(head->next!=NULL)
+    {
+        head->next->prev=NULL;
+    }
     head=p->next;
     delete p;
-
   }
 	void show()
 	{
